@@ -1,51 +1,226 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7fa;
 }
 
-header {
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+/* Navbar */
+nav {
   background-color: #333;
-  color: white;
-  padding: 20px;
+  padding: 10px 0;
   text-align: center;
 }
 
-h1 {
-  margin: 0;
-  font-size: 36px;
+nav ul {
+  list-style: none;
 }
 
-p {
+nav ul li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
   font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
 }
 
-section {
-  padding: 20px;
-  margin: 20px;
+nav ul li a:hover {
+  background-color: #ff6200;
+  border-radius: 5px;
 }
 
-h2 {
-  font-size: 28px;
-  color: #333;
-}
-
-.projects ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.projects li {
-  background-color: white;
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-footer {
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #ff6200, #ff9f00);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
   text-align: center;
-  padding: 10px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  background-color: #fff;
+  color: #333;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff6200;
+  color: white;
+}
+
+/* About Section */
+.about {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Projects Section */
+.projects {
+  padding: 50px 20px;
+  background-color: #f4f7fa;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.project-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #ff6200;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 1rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff9f00;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #fff;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact a {
+  color: #ff6200;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.contact a:hover {
+  color: #ff9f00;
+}
+
+/* Footer */
+footer {
   background-color: #333;
   color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+footer p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .projects h2 {
+    font-size: 2rem;
+  }
+}
+.indent-text {
+  margin-left: 10px;  /* Adjust the value to increase/decrease the indent */
 }
